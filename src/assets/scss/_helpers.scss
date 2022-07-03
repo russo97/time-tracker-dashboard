@@ -1,0 +1,59 @@
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+@each $display in (flex, block) {
+  .d-#{$display} {
+    display: $display;
+  }
+}
+
+@each $align in (center) {
+  .align-items-#{$align} {
+    align-items: $align;
+  }
+}
+
+@each $direction in (center, end, space-between) {
+  $selector: $direction;
+
+  @if str-slice($direction, 1, 5) == "space" {
+    $selector: str-slice($direction, 7);
+  }
+
+  .justify-content-#{$selector} {
+    justify-content: $direction;
+  }
+}
+
+@each $direction in (row, column) {
+  .flex-#{$direction} {
+    flex-direction: $direction;
+  }
+}
+
+@each $position in (relative, absolute) {
+  .p-#{$position} {
+    position: $position;
+  }
+}
+
+@each $overflow in (visible, hidden) {
+  .overflow-#{$overflow} {
+    overflow: $overflow;
+  }
+}
+
+@media (min-width: 768px) {
+  @each $direction in (row, column) {
+    .flex-md-#{$direction} {
+      flex-direction: $direction;
+    }
+  }
+}
+
