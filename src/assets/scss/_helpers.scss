@@ -50,6 +50,12 @@
 }
 
 @media (min-width: 768px) {
+  @each $align in (start, center) {
+    .align-items-md-#{$align} {
+      align-items: $align;
+    }
+  }
+
   @each $direction in (row, column) {
     .flex-md-#{$direction} {
       flex-direction: $direction;

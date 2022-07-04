@@ -3,7 +3,7 @@
     <div class="mainreport__wrapper w-100">
 
       <div class="mainreport__details d-flex">
-        <div class="mainreport__upperpill w-100 d-flex align-items-center flex-md-column">
+        <div class="mainreport__upperpill w-100 d-flex align-items-center align-items-md-start flex-md-column">
           <figure class="mainreport__pic d-block">
             <img
               class="w-100 h-100"
